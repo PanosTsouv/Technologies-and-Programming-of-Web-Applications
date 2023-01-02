@@ -1,0 +1,21 @@
+<main>
+    <h2>Form</h2>
+    <form action="#">
+        <fieldset>
+            <h3>Book {{id}}</h3>
+            <img src="{{image}}" alt="image" id="image">
+            <div class="review_text_container">
+                <label for="title_form">Title : </label>
+                <input type="text" name="title_form" id="title_form" value="{{title}}">
+                <label for="author_form">Author : </label>
+                <input type="text" name="author_form" id="author_form" value="{{author}}">
+                <label for="review-text_area">Review : </label>
+                <textarea name="review-text_area" id="review-text_area" cols="25" rows="4">{{review}}</textarea>
+            </div>
+            <div class="form_button_container">
+                <input type="button" value="save" id="form_submit" onclick='updateBook({{id}})'>
+                <input type="reset" value="reset" id="form_reset">
+            </div>
+        </fieldset>
+    </form>
+</main>

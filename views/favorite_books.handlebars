@@ -1,0 +1,29 @@
+
+<main>
+    <section id="filter">
+        <input type="text" name="filter_key" id="filter_key" 
+            placeholder = "Enter your keywords to filter the list with favorite books" oninput="filterButtonAction()">
+    </section>
+    <h1 id="favorite_header" >Favorite Books</h1>
+    <section id="favorite_books_section">
+        <ul id="favorite_results">
+            {{#each books}}
+                <li id="li{{id}}">
+                    <div class="text_container">
+                        <p id="title{{id}}">{{title}}</p>
+                        <p id="author{{id}}">{{author}}</p>
+                    </div>
+                    <img id="image{{id}}" src="{{image}}">
+                    <div class="review_container">
+                        <p>Review : </p>
+                        <p id="review_text">{{review}}</p>
+                    </div>
+                    <div class="button_container">
+                        <input type="button" id="{{id}}" class="details" value="">
+                        <input type="button" id="{{id}}" class="delete" value="">
+                    </div>
+                </li>
+            {{/each}}
+        </ul>
+    </section>
+</main>
